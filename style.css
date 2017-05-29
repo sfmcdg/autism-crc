@@ -1,0 +1,80 @@
+#success_message{ display: none;}
+
+.well {border-radius: 0px! important;}
+
+.banner-Image {
+	width: 100%;
+}
+
+.header-Logo-wrapper{
+	width: 100%;
+	background: #FFFFFF;
+}
+.autism-logo{
+	padding: 17px 30px 0px 10px;
+	width: 300px;
+	float: left;
+}
+
+.control-label{
+	text-align:left! important;
+	font-size: 12px! important;
+
+}
+.Text-Box{
+	max-width: 900px;
+	padding: 30px 0px 30px 0px;  
+}
+
+.p-l-3{
+	padding-left: 30px! important;
+}
+.p-t-10{
+	padding-top: 10px! important;
+	padding-left: 0px! important;
+}
+.p-l-0{
+	
+	padding-left: 0px! important;
+}
+.p-t-0{
+	
+	padding-top: 0px! important;
+}
+.p-l-2{
+	text-align: center;
+	margin: auto;
+	font-weight: normal;
+	width: 200px! important;
+	height: 38px;
+	padding-left: 0px! important;
+}
+.m-x-30{
+	margin-top: 20px! important;
+	margin-bottom: 20px! important;
+}
+.m-x-40{
+	margin-top: 40px! important;
+	margin-bottom: 20px! important;
+}
+.m-b-x{
+	margin-bottom: 20px! important;
+	text-align: center! important;
+}
+.p-l-x{
+	text-align: center;
+	margin: auto;
+	font-weight: normal;
+	width: 200px! important;
+	height: 20px;
+	padding-left: 0px! important;
+}
+.minHeight{
+	height: 45px! important;
+}
+.col-md-2 {
+	padding-right: 0px! important;
+}
+#checkboxValQ3ID{
+	padding-left: 20px;
+}

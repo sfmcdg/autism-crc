@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AUSTISM CRC | RSVP</title>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+    <div class="row centered">
+      <div class="col-sm-12">
+                <img class="autism-logo" src="https://www.autismcrc.com.au/sites/default/files/autcrc-logo-white-bg.png">
+        </div>
+    </div>
+        
+        <form id="contact_form" class="well form-horizontal" method="POST" action="%%= RequestParameter('PAGEURL') =%%">
+            <fieldset>
+                <div class="Text-Box">
+                    <p>Thanks for attending the Alpha Workshop and Photo Walk event. We’d love your feedback, please take 2 minutes to tell us how you found the event. Please be sure to complete the survey by Wednesday, 30th June.</p>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="FirstName" placeholder="First Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="LastName" placeholder="Last Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-mail Address" class="form-control" type="email">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Mobile Number #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="PhoneNumber" id="mobile" class="form-control" type="text" placeholder="04xx xxx xxx">
+                        </div>
+                    </div>
+                </div>
+                <!-- Date of Birth Field -->
+                <div class="form-group">
+                    <label for="birthDate" class="col-md-2 control-label">Date of Birth</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="DateOfBirth" type="text" id="DateOfBirth" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <!-- Select Basic -->
+                <div class="form-group required">
+                    <label class="col-md-2 control-label" required>Q2. Which event did you attend?</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input class="checkboxVal" type="checkbox" name="Event_Mel" value="true" />Melbourne</label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input class="checkboxVal" type="checkbox" name="Event_Syd" value="true" />Sydney</label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input class="checkboxVal" type="checkbox" name="Event_Bri" value="true" />Brisbane</label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input class="checkboxVal" type="checkbox" name="Event_Gol" value="true" />Gold Coast</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Q4. Which products did you trial? </label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="ProductTrial" class="form-control selectpicker">
+                                <option value="">Please select the product</option>
+                                <option value="PlayStation">PlayStation®</option>
+                                <option value="Telivisions">Telivisions</option>
+                                <option value="Home">Home Cinema devices</option>
+                                <option value="Bluray">Blu-ray Disc & DVD Players</option>
+                                <option value="Portable">Portable Projectors</option>
+                                <option value="Headphones">Headphones</option>
+                                <option value="Walkman">Walkman Digital Music Players</option>
+                                <option value="Wireless Speakers">Wireless Speakers & Speaker Docks</option>
+                                <option value="Digital">Digital Voice Recorders</option>
+                                <option value="Boom">Boom boxes, Radios & Portable CD Players</option>
+                                <option value="Interchangeable">Interchangeable-Lens Cameras</option>
+                                <option value="Cyber">Cyber-shotTM Compact Cameras</option>
+                                <option value="Xperia">Xperia Smartphones</option>
+                                <option value="Handycam">Handycam</option>
+                                <option value="Action">Action Cam</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-x-30">
+                    <label class="col-md-2 control-label">Q5. Which products did you trial?</label>
+                    <div class="col-md-10 p-l-0">
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Play" value="true" />PlayStation®</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_TV" value="true" />Telivisions</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_HomeCine" value="true" />Home Cinema devices</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Bluray" value="true" />Blu-ray Disc & DVD Players</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Project" value="true" />Portable Projectors</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Headphone" value="true" />Headphones</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Walkman" value="true" />Walkman Digital Music Players</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Wireless" value="true" />Wireless Speakers & Speaker Docks</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Digital" value="true" />Digital Voice Recorders</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Boom" value="true" />Boom boxes, Radios & Portable CD Players</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Lens" value="true" />Interchangeable-Lens Cameras</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Cyber" value="true" />Cyber-shotTM Compact Cameras</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_XPhone" value="true" />Xperia Smartphones</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Tab" value="true" />Xperia Tablets</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Tennis" value="true" />Tennis Sensor</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 minHeight">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkboxValQ5" type="checkbox" name="Q5_Tab" value="true" />Handycam</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                        <span class="help-block" id="checkboxValQ5ID"></span>
+                    </div>
+                </div>
+                <span class="help-block" id="checkboxValQ5ID"></span>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Q6. On a scale of 1 – 10, how highly would you rate the event?</label>
+                    <div class="col-md-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="RateLog" value="1" /> 1
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="2" /> 2
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="3" /> 3
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="4" /> 4
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="5" /> 5
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="6" /> 6
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="7" /> 7
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="8" /> 8
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="9" /> 9
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="RateLog" value="10" /> 10
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Q7. How did you hear about the event?</label>
+                    <div class="col-md-10 p-l-0">
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony Kios" /> Sony Kiosk
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony Centre Nunawading" /> Sony Centre Nunawading
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony Australia Emails" /> Sony Australia Emails
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony Australia Facebook page" /> Sony Australia Facebook page
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony New Zealand Website" />Sony New Zealand Website
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" value="Sony New Zealand Instagram account" /> Sony New Zealand Instagram account
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="EventLog" id="specifyOther" value="" /> Other – Please specify:
+                                </label>
+                                <div class="p-t-10 input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                    <textarea class="form-control" name="comment" disabled id="specifyField"></textarea>
+                                </div>
+                            </div>
+                            <span class="help-block" id="EventLogVal"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Q8. How likely is it that you would recommend this event to a friend or colleague?</label>
+                    <div class="col-md-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="LikelyLog" value="1" /> 1
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="2" /> 2
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="3" /> 3
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="4" /> 4
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="5" /> 5
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="6" /> 6
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="7" /> 7
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="8" /> 8
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="9" /> 9
+                            </label>
+                            <label class="p-l-3">
+                                <input type="radio" name="LikelyLog" value="10" /> 10
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-2 control-label p-t-0">Q9. Is there any additional feedback that you would like to provide?</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea class="form-control" name="AdditionalFeed" placeholder="Additional Feedback"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-x-40">
+                    <label class="col-md-2 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning" name="FormSubmit">Submit <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- hidden fields -->
+            <input type="hidden" name="__successPage" id="__successPage" value="%%=CloudPagesURL(333)=%%">
+            <input type="hidden" name="__errorPage" id="__errorPage" value="%%=CloudPagesURL(332)=%%">
+            <input type="hidden" name="__contextName" id="__contextName" value="profileFormPost">
+            <input type="hidden" name="__executionContext" id="__executionContext" value="POST">
+            <!-- end hidden fields -->
+        </form>
+    </div>
+    </div>
+    <!-- /.container -->
+    <!-- %%[[name="profileFormPost";type="POST"]
+
+      
+        SET @FirstName = RequestParameter("FirstName")
+        SET @LastName = RequestParameter("LastName")
+        SET @email = RequestParameter("email")
+        SET @PhoneNumber = RequestParameter("PhoneNumber")
+        SET @DateOfBirth = RequestParameter("DateOfBirth")
+        SET @Event_Mel = IIF(RequestParameter("Event_Mel")=='true',1,0)
+        SET @Event_Syd = IIF(RequestParameter("Event_Syd")=='true',1,0)
+        SET @Event_Bri = IIF(RequestParameter("Event_Bri")=='true',1,0)
+        SET @Event_Gol = IIF(RequestParameter("Event_Gol")=='true',1,0)
+        SET @Q3_Play = IIF(RequestParameter("Q3_Play")=='true',1,0)
+        SET @Q3_TV = IIF(RequestParameter("Q3_TV")=='true',1,0)
+        SET @Q3_HomeCine = IIF(RequestParameter("Q3_HomeCine")=='true',1,0)
+        SET @Q3_Bluray = IIF(RequestParameter("Q3_Bluray")=='true',1,0)
+        SET @Q3_Project = IIF(RequestParameter("Q3_Project")=='true',1,0)
+        SET @Q3_Headphone = IIF(RequestParameter("Q3_Headphone")=='true',1,0)
+        SET @Q3_Walkman = IIF(RequestParameter("Q3_Walkman")=='true',1,0)
+        SET @Q3_Wireless = IIF(RequestParameter("Q3_Wireless")=='true',1,0)
+        SET @Q3_Digital = IIF(RequestParameter("Q3_Digital")=='true',1,0)
+        SET @Q3_Boom = IIF(RequestParameter("Q3_Boom")=='true',1,0)
+        SET @Q3_Lens = IIF(RequestParameter("Q3_Lens")=='true',1,0)
+        SET @Q3_Cyber = IIF(RequestParameter("Q3_Cyber")=='true',1,0)
+        SET @Q3_XPhone = IIF(RequestParameter("Q3_XPhone")=='true',1,0)
+        SET @Q3_Tab = IIF(RequestParameter("Q3_Tab")=='true',1,0)
+        SET @Q3_Tennis = IIF(RequestParameter("Q3_Tennis")=='true',1,0)
+        SET @Q5_Play = IIF(RequestParameter("Q5_Play")=='true',1,0)
+        SET @Q5_TV = IIF(RequestParameter("Q5_TV")=='true',1,0)
+        SET @Q5_HomeCine = IIF(RequestParameter("Q5_HomeCine")=='true',1,0)
+        SET @Q5_Bluray = IIF(RequestParameter("Q5_Bluray")=='true',1,0)
+        SET @Q5_Project = IIF(RequestParameter("Q5_Project")=='true',1,0)
+        SET @Q5_Headphone = IIF(RequestParameter("Q5_Headphone")=='true',1,0)
+        SET @Q5_Walkman = IIF(RequestParameter("Q5_Walkman")=='true',1,0)
+        SET @Q5_Wireless = IIF(RequestParameter("Q5_Wireless")=='true',1,0)
+        SET @Q5_Digital = IIF(RequestParameter("Q5_Digital")=='true',1,0)
+        SET @Q5_Boom = IIF(RequestParameter("Q5_Boom")=='true',1,0)
+        SET @Q5_Lens = IIF(RequestParameter("Q5_Lens")=='true',1,0)
+        SET @Q5_Cyber = IIF(RequestParameter("Q5_Cyber")=='true',1,0)
+        SET @Q5_XPhone = IIF(RequestParameter("Q5_XPhone")=='true',1,0)
+        SET @Q5_Tab = IIF(RequestParameter("Q5_Tab")=='true',1,0)
+        SET @Q5_Tennis = IIF(RequestParameter("Q5_Tennis")=='true',1,0)
+        SET @Q5_Handy = IIF(RequestParameter("Q5_Handy")=='true',1,0)
+        SET @ProductTrial = RequestParameter("ProductTrial")
+        SET @RateLog = RequestParameter("RateLog")
+        SET @LikelyLog = RequestParameter("LikelyLog")
+        SET @EventLog = RequestParameter("EventLog")
+        SET @comment = RequestParameter("comment")
+        SET @AdditionalFeed = RequestParameter("AdditionalFeed")
+ 
+
+ /* Update DE */
+
+      SET @status =
+        InsertData
+        (
+        "Survey", 
+        "FirstName", @FirstName,
+        "LastName", @LastName,
+        "email", @email,
+        "PhoneNumber", @PhoneNumber,
+        "DateOfBirth", @DateOfBirth,
+        "Event_Mel", @Event_Mel,
+        "Event_Syd", @Event_Syd,
+        "Event_Bri", @Event_Bri,
+        "Event_Gol", @Event_Gol,
+        "Q3_Play", @Q3_Play,
+        "Q3_TV", @Q3_TV,
+        "Q3_HomeCine", @Q3_HomeCine,
+        "Q3_Bluray", @Q3_Bluray,
+        "Q3_Project", @Q3_Project,
+        "Q3_Headphone", @Q3_Headphone,
+        "Q3_Walkman", @Q3_Walkman,
+        "Q3_Wireless", @Q3_Wireless,
+        "Q3_Digital", @Q3_Digital,
+        "Q3_Boom", @Q3_Boom,
+        "Q3_Lens", @Q3_Lens,
+        "Q3_Cyber", @Q3_Cyber,
+        "Q3_XPhone", @Q3_XPhone,
+        "Q3_Tab", @Q3_Tab,
+        "Q3_Tennis", @Q3_Tennis,
+        "Q5_Play", @Q5_Play,
+        "Q5_TV", @Q5_TV,
+        "Q5_HomeCine", @Q5_HomeCine,
+        "Q5_Bluray", @Q5_Bluray,
+        "Q5_Project", @Q5_Project,
+        "Q5_Headphone", @Q5_Headphone,
+        "Q5_Walkman", @Q5_Walkman,
+        "Q5_Wireless", @Q5_Wireless,
+        "Q5_Digital", @Q5_Digital,
+        "Q5_Boom", @Q5_Boom,
+        "Q5_Lens", @Q5_Lens,
+        "Q5_Cyber", @Q5_Cyber,
+        "Q5_XPhone", @Q5_XPhone,
+        "Q5_Tab", @Q5_Tab,
+        "Q5_Tennis", @Q5_Tennis,
+        "Q5_Handy", @Q5_Handy,
+        "RateLog", @RateLog,
+        "LikelyLog", @LikelyLog,
+        "comment", @comment,
+        "EventLog", @EventLog,
+        "ProductTrial", @ProductTrial,
+        "AdditionalFeed", @AdditionalFeed
+        )
+
+IF @status == 1 THEN
+            Redirect(CloudPagesURL(333))
+        ELSE
+            Redirect(CloudPagesURL(332))
+        ENDIF
+        
+      ]%% -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/locale/en-au.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //masks phone input
+        $('#mobile').mask("0499 999 999", {
+            placeholder: "04xx xxx xxx"
+        });
+    });
+    </script>
+    <script>
+    var picker = new Pikaday({
+        field: document.getElementById('DateOfBirth'),
+        firstDay: 1,
+        format: 'MM/DD/YYYY',
+        minDate: new Date('1916-01-01'),
+        maxDate: new Date(),
+        yearRange: [1916, 2020]
+
+    });
+    </script>
+    <script type="text/javascript">
+    var specifyOther = document.querySelectorAll('input[name="EventLog"]');
+    var specifyField = document.getElementById('specifyField');
+    var tempSpecify = "";
+
+    for (var i = 0; i < specifyOther.length; i++) {
+        specifyOther[i].addEventListener("change", addressHandler);
+    }
+
+
+    function addressHandler() {
+        if (this.id == "specifyOther") {
+            specifyField.disabled = false;
+            specifyField.value = tempSpecify;
+        } else {
+            tempSpecify = specifyField.value;
+            specifyField.value = "";
+            specifyField.disabled = true;
+        }
+    }
+
+    $(document).ready(function() {
+        $('#contact_form').bootstrapValidator({
+            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+            //feedbackIcons: {
+            // valid: 'glyphicon glyphicon-ok',
+            // invalid: 'glyphicon glyphicon-remove',
+            // validating: 'glyphicon glyphicon-refresh'
+            // },
+            fields: {
+
+                comment: {
+                    validators: {
+                        stringLength: {
+                            min: 5,
+                            max: 200,
+                            message: 'Please enter at least 5 characters and no more than 200'
+                        },
+                        notEmpty: {
+                            message: 'Please supply your description'
+                        }
+                    }
+                },
+                RateLog: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                LikelyLog: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                EventLog: {
+                    container: '#EventLogVal',
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                AdditionalFeed: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please supply your feedback'
+                        }
+                    }
+                },
+                ProductTrial: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                checkboxVal: {
+                    selector: ".checkboxVal",
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                checkboxValQ3: {
+                    selector: ".checkboxValQ3",
+                    container: '#checkboxValQ3ID',
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                },
+                checkboxValQ5: {
+                    selector: ".checkboxValQ5",
+                    container: '#checkboxValQ5ID',
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select a value'
+                        }
+                    }
+                }
+            }
+        })
+
+
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({
+                    opacity: "show"
+                }, "slow") // Do something ...
+            $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+
+        });
+
+    });
+    </script>
+
+     <script>
+  /*
+      jQuery Masked Input Plugin
+      Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)
+      Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license)
+      Version: 1.4.1
+      */
+      !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):a("object"==typeof exports?require("jquery"):jQuery)}(function(a){var b,c=navigator.userAgent,d=/iphone/i.test(c),e=/chrome/i.test(c),f=/android/i.test(c);a.mask={definitions:{9:"[0-9]",a:"[A-Za-z]","*":"[A-Za-z0-9]"},autoclear:!0,dataName:"rawMaskFn",placeholder:"_"},a.fn.extend({caret:function(a,b){var c;if(0!==this.length&&!this.is(":hidden"))return"number"==typeof a?(b="number"==typeof b?b:a,this.each(function(){this.setSelectionRange?this.setSelectionRange(a,b):this.createTextRange&&(c=this.createTextRange(),c.collapse(!0),c.moveEnd("character",b),c.moveStart("character",a),c.select())})):(this[0].setSelectionRange?(a=this[0].selectionStart,b=this[0].selectionEnd):document.selection&&document.selection.createRange&&(c=document.selection.createRange(),a=0-c.duplicate().moveStart("character",-1e5),b=a+c.text.length),{begin:a,end:b})},unmask:function(){return this.trigger("unmask")},mask:function(c,g){var h,i,j,k,l,m,n,o;if(!c&&this.length>0){h=a(this[0]);var p=h.data(a.mask.dataName);return p?p():void 0}return g=a.extend({autoclear:a.mask.autoclear,placeholder:a.mask.placeholder,completed:null},g),i=a.mask.definitions,j=[],k=n=c.length,l=null,a.each(c.split(""),function(a,b){"?"==b?(n--,k=a):i[b]?(j.push(new RegExp(i[b])),null===l&&(l=j.length-1),k>a&&(m=j.length-1)):j.push(null)}),this.trigger("unmask").each(function(){function h(){if(g.completed){for(var a=l;m>=a;a++)if(j[a]&&C[a]===p(a))return;g.completed.call(B)}}function p(a){return g.placeholder.charAt(a<g.placeholder.length?a:0)}function q(a){for(;++a<n&&!j[a];);return a}function r(a){for(;--a>=0&&!j[a];);return a}function s(a,b){var c,d;if(!(0>a)){for(c=a,d=q(b);n>c;c++)if(j[c]){if(!(n>d&&j[c].test(C[d])))break;C[c]=C[d],C[d]=p(d),d=q(d)}z(),B.caret(Math.max(l,a))}}function t(a){var b,c,d,e;for(b=a,c=p(a);n>b;b++)if(j[b]){if(d=q(b),e=C[b],C[b]=c,!(n>d&&j[d].test(e)))break;c=e}}function u(){var a=B.val(),b=B.caret();if(o&&o.length&&o.length>a.length){for(A(!0);b.begin>0&&!j[b.begin-1];)b.begin--;if(0===b.begin)for(;b.begin<l&&!j[b.begin];)b.begin++;B.caret(b.begin,b.begin)}else{for(A(!0);b.begin<n&&!j[b.begin];)b.begin++;B.caret(b.begin,b.begin)}h()}function v(){A(),B.val()!=E&&B.change()}function w(a){if(!B.prop("readonly")){var b,c,e,f=a.which||a.keyCode;o=B.val(),8===f||46===f||d&&127===f?(b=B.caret(),c=b.begin,e=b.end,e-c===0&&(c=46!==f?r(c):e=q(c-1),e=46===f?q(e):e),y(c,e),s(c,e-1),a.preventDefault()):13===f?v.call(this,a):27===f&&(B.val(E),B.caret(0,A()),a.preventDefault())}}function x(b){if(!B.prop("readonly")){var c,d,e,g=b.which||b.keyCode,i=B.caret();if(!(b.ctrlKey||b.altKey||b.metaKey||32>g)&&g&&13!==g){if(i.end-i.begin!==0&&(y(i.begin,i.end),s(i.begin,i.end-1)),c=q(i.begin-1),n>c&&(d=String.fromCharCode(g),j[c].test(d))){if(t(c),C[c]=d,z(),e=q(c),f){var k=function(){a.proxy(a.fn.caret,B,e)()};setTimeout(k,0)}else B.caret(e);i.begin<=m&&h()}b.preventDefault()}}}function y(a,b){var c;for(c=a;b>c&&n>c;c++)j[c]&&(C[c]=p(c))}function z(){B.val(C.join(""))}function A(a){var b,c,d,e=B.val(),f=-1;for(b=0,d=0;n>b;b++)if(j[b]){for(C[b]=p(b);d++<e.length;)if(c=e.charAt(d-1),j[b].test(c)){C[b]=c,f=b;break}if(d>e.length){y(b+1,n);break}}else C[b]===e.charAt(d)&&d++,k>b&&(f=b);return a?z():k>f+1?g.autoclear||C.join("")===D?(B.val()&&B.val(""),y(0,n)):z():(z(),B.val(B.val().substring(0,f+1))),k?b:l}var B=a(this),C=a.map(c.split(""),function(a,b){return"?"!=a?i[a]?p(b):a:void 0}),D=C.join(""),E=B.val();B.data(a.mask.dataName,function(){return a.map(C,function(a,b){return j[b]&&a!=p(b)?a:null}).join("")}),B.one("unmask",function(){B.off(".mask").removeData(a.mask.dataName)}).on("focus.mask",function(){if(!B.prop("readonly")){clearTimeout(b);var a;E=B.val(),a=A(),b=setTimeout(function(){B.get(0)===document.activeElement&&(z(),a==c.replace("?","").length?B.caret(0,a):B.caret(a))},10)}}).on("blur.mask",v).on("keydown.mask",w).on("keypress.mask",x).on("input.mask paste.mask",function(){B.prop("readonly")||setTimeout(function(){var a=A(!0);B.caret(a),h()},0)}),e&&f&&B.off("input.mask").on("input.mask",u),A()})}})});
+      </script>
+   
+</body>
+
+</html>
