@@ -5,15 +5,19 @@
 .banner-Image {
 	width: 100%;
 }
-
+.bgcolor{
+	background-color: #000f4c !important;
+}
 .header-Logo-wrapper{
 	width: 100%;
-	background: #FFFFFF;
+	background-color: #000f4c;
 }
 .autism-logo{
-	padding: 17px 30px 0px 10px;
-	width: 300px;
+	width: 138px;
 	float: left;
+}
+.margin0{
+	margin: 0 auto;
 }
 
 .control-label{
@@ -77,4 +81,12 @@
 }
 #checkboxValQ3ID{
 	padding-left: 20px;
+}
+footer{
+	font-size: 10px;
+	color: grey;
+}
+
+.hidenshow, .hidenshow1 {
+	display: none;
 }
