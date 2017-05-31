@@ -220,7 +220,7 @@
         <footer class="text-center"><p>&copy; Autism CRC 2017</p></footer>
     </div>
     <!-- /.container -->
-    <!-- %%[[name="profileFormPost";type="POST"]
+    %%[[name="profileFormPost";type="POST"]
 
       
         SET @FirstName = RequestParameter("FirstName")
@@ -280,8 +280,73 @@
         "AddFirstName4", @AddFirstName4,
         "AddSurname4", @AddSurname4,
 
-        "RSVP_Submit_Date", @RSVP_Submit_Date,
+        "RSVP_Submit_Date", @RSVP_Submit_Date
         )
+
+        /* Triggered Send */
+        var @emailaddr, @ts, @tsDef, @ts_subkey, @ts_sub, @ts_statusCode, @errorCode
+
+        SET @emailaddr = "brad.sapkota@gmail.com"
+
+        SET @ts = CreateObject("TriggeredSend")
+        SET @tsDef = CreateObject("TriggeredSendDefinition")
+        SET @ts_subkey = @emailaddr
+
+        SetObjectProperty(@tsDef, "CustomerKey", "47793")
+        SetObjectProperty(@ts, "TriggeredSendDefinition", @tsDef)
+
+        SET @ts_sub = CreateObject("Subscriber")
+        SetObjectProperty(@ts_sub, "SubscriberKey", @ts_subkey)
+        SetObjectProperty(@ts_sub, "EmailAddress", @ts_subkey)
+
+        SET @attr1 = CreateObject("Attribute")
+        SET @attr2 = CreateObject("Attribute")
+        SET @attr3 = CreateObject("Attribute")
+        SET @attr4 = CreateObject("Attribute")
+        SET @attr5 = CreateObject("Attribute")
+        SET @attr6 = CreateObject("Attribute")
+        SET @attr7 = CreateObject("Attribute")
+        SET @attr8 = CreateObject("Attribute")
+        SET @attr9 = CreateObject("Attribute")
+
+        SetObjectProperty(@attr1, "Name", "TITLE")
+        SetObjectProperty(@attr2, "Name", "FIRST_NAME")
+        SetObjectProperty(@attr3, "Name", "LAST_NAME")
+        SetObjectProperty(@attr4, "Name", "EMAIL_ADDRESS")
+        SetObjectProperty(@attr5, "Name", "CONTACT_NUMBER")
+        SetObjectProperty(@attr6, "Name", "PREFERRED_METHOD")
+        SetObjectProperty(@attr7, "Name", "BOOKING_ID")
+        SetObjectProperty(@attr8, "Name", "FLYING_FROM")
+        SetObjectProperty(@attr9, "Name", "EXTRA_INFORMATION")
+
+        SetObjectProperty(@attr1, "Value", @title)
+        SetObjectProperty(@attr2, "Value", @fname)
+        SetObjectProperty(@attr3, "Value", @lname)
+        SetObjectProperty(@attr4, "Value", @email)
+        SetObjectProperty(@attr5, "Value", @contact)
+        SetObjectProperty(@attr6, "Value", @preferred_contact_method)
+        SetObjectProperty(@attr7, "Value", @booking_id)
+        SetObjectProperty(@attr8, "Value", @flying_from)
+        SetObjectProperty(@attr9, "Value", @extra_information)
+
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr1)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr2)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr3)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr4)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr5)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr6)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr7)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr8)
+        AddObjectArrayItem(@ts_sub, "Attributes", @attr9)
+
+        AddObjectArrayItem(@ts, "Subscribers", @ts_sub)
+        SET @ts_statusCode = InvokeCreate(@ts, @ts_statusMsg, @errorCode)
+
+IF @updateStatus == 1 AND @ts_statusCode == "OK" THEN
+  Redirect(CloudPagesURL(52))
+ ELSE
+  Redirect(CloudPagesURL(53))
+ ENDIF
 
 IF @status == 1 THEN
             Redirect("http://www.google.com")
@@ -289,7 +354,8 @@ IF @status == 1 THEN
             Redirect("http://www.yahoo.com")
         ENDIF
         
-      ]%% -->
+      ]%%
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
