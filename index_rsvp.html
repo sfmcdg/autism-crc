@@ -381,18 +381,10 @@
         AddObjectArrayItem(@ts, "Subscribers", @ts_sub)
         SET @ts_statusCode = InvokeCreate(@ts, @ts_statusMsg, @errorCode)
 
-IF @updateStatus == 1 AND @ts_statusCode == "OK" THEN
-  Redirect(CloudPagesURL(52))
- ELSE
-  Redirect(CloudPagesURL(53))
- ENDIF
-
-IF @status == 1 THEN
+    IF @updateStatus == 1 AND @ts_statusCode == "OK" THEN
             Redirect("http://www.google.com")
         ELSE
             Redirect("http://www.yahoo.com")
-        ENDIF
-        
       ]%%
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
